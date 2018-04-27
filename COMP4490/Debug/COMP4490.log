@@ -1,0 +1,4 @@
+﻿  Sphere.cpp
+d:\documents\university\comp 4490\project\comp4490\sphere.cpp(61): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+d:\documents\university\comp 4490\project\comp4490\sphere.cpp(95): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  COMP4490.vcxproj -> D:\Documents\University\COMP 4490\Project\build\comp4490.exe
