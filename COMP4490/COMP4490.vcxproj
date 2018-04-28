@@ -89,6 +89,7 @@
     <ClInclude Include="..\src\vc\stdafx.h" />
     <ClInclude Include="..\src\vc\targetver.h" />
     <ClInclude Include="DirectionalLight.h" />
+    <ClInclude Include="includer.h" />
     <ClInclude Include="kdtree.h" />
     <ClInclude Include="Light.h" />
     <ClInclude Include="LightList.h" />

@@ -60,6 +60,9 @@
     <ClInclude Include="treeNode.h">
       <Filter>Source Files</Filter>
     </ClInclude>
+    <ClInclude Include="includer.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\a1main.cpp">

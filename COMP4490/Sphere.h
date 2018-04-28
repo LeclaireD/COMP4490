@@ -17,8 +17,9 @@ public:
 	float getT();
 	Vec3 getColour();
 	float getKMat();
-	void getPoints();
+	Vec3 * getPoints();
 	bool checkPoints(int, int);
 	float getSMat();
 	bool intersect(Ray);
+	int totalPoints();
 };

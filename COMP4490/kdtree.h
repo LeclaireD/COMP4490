@@ -1,17 +1,25 @@
 #pragma once
 #include "Vec3.h"
 #include "treeNode.h"
+#include "assert.h"
+#include <stdlib.h>
+#include <stdio.h>
+class kdtree {
+	int maxSize, currNodes, currPos = 0;
 
-class kdtree{
-	int max;
-	int currSize;
-	int currPos;
+	treeNode * pointData;
 	treeNode * root;
-
+	Vec3 * points;
 public:
+
 	kdtree();
-	kdtree(int max, treeNode * root);
-	void build();
+	void prepare(Vec3 * points, int count);
+	treeNode * build(int startIdx, int endIdx, int depth);
+	treeNode * getBranch(double split);
+	treeNode * getLeaf(int index);
+	void printTree(treeNode * node);
+	treeNode * nextNode();
+	treeNode * getRoot();
 };
 
 /* control value to indicate the end of iteration 

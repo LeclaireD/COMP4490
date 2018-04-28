@@ -12,13 +12,15 @@ Sphere::Sphere(Vec3 origin, Vec3 colour, float radius, float kmat, float smat) {
 	this->sMat = smat;
 	t = 0;
 }
+
 Vec3 Sphere::getColour() { return colour; }
 float Sphere::getKMat() { return kMat; }
 float Sphere::getSMat() { return sMat; }
 float Sphere::getT() { return t; }
 Vec3 Sphere::getNormal(Vec3 n){ return (n - origin) / radius; }
+int Sphere::totalPoints() { return numPoints; }
 
-void Sphere::getPoints() {
+Vec3 * Sphere::getPoints() {
 	// One vertex at every latitude-longitude intersection,
 	// plus one for the north pole and one for the south.
 	// One meridian serves as a UV seam, so we float the vertices there.
@@ -64,14 +66,16 @@ void Sphere::getPoints() {
 					v++;
 			}
 		}
-
+	return points;
 }
 
 
 bool Sphere::checkPoints(int x, int y) {
+
 	for (int i = 0; i < numPoints; i++) {
-		if ((int)points[i].x == x && (int)points[i].y == y)
+		if ((int)points[i].x == x && (int)points[i].y == y) {
 			return true;
+		}
 	}
 	return false;
 }

@@ -12,6 +12,7 @@ public:
 	virtual float getKMat() = 0;
 	virtual float getSMat() = 0;
 	virtual Vec3 getNormal(Vec3) = 0;
-	virtual void getPoints() = 0;
+	virtual Vec3 * getPoints() = 0;
 	virtual bool checkPoints(int, int) = 0;
+	virtual int totalPoints() = 0;
 };

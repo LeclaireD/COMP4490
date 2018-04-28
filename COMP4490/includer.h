@@ -1,0 +1,12 @@
+#pragma once
+#include <stdio.h>
+#include <cmath>
+#include "Sphere.h"
+#include "Vec3.h"
+#include "Vecmath.h"
+#include "Ray.h"
+#include "ShapeList.h"
+#include "PointLight.h"
+#include "LightList.h"
+#include "DirectionalLight.h"
+#include "kdtree.h"
